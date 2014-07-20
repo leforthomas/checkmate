@@ -1,0 +1,87 @@
+.navigator {
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 50%,#207cca 99%,#7db9e8 100%);
+}
+
+.title {
+    background: url('./img/checkmate.png') no-repeat left middle;
+}
+
+.picturePanel {
+    height: 49%;
+    padding: 10px;
+    text-align: center;
+}
+    
+.profilePicture {
+    height: 100%;
+    margin: auto;
+}
+
+.namesPanel {
+    height: 49%;
+}
+
+.name {
+    height: 15%;
+    margin: 1% 10%;
+    padding: 5px;
+    border: 1px solid white;
+    font-size: 1.2em;
+    color: white;
+    background: #25c5a2;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.test {
+    font-size: 1.4em;
+    color: red;
+}
+
+.name.ng-enter {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+.name.ng-leave {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+.name.ng-enter, .name.ng-leave, .profilePicture.ng-enter {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.profilePicture.ng-enter {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+}
+
+div.scorePanel {
+    display: table;
+    height: 100%;
+    text-align: left;
+}
+
+div.scorePanel span {
+    display: table-cell;
+    width: 100%;
+    padding: 0px 10px;
+    vertical-align: middle;
+}
+
+div.scorePanel span:first-child {
+}
+
+.scoreComment {
+    text-align: right;
+}
+
+.shakeElement {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}

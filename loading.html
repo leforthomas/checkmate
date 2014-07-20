@@ -1,0 +1,32 @@
+<ons-navigator hide-toolbar="true" title="CheckMate!">
+    <ons-page class="center">
+        <div class="topcoat-navigation-bar">
+             <div class="topcoat-navigation-bar__item full">
+                 <h1 class="topcoat-navigation-bar__title title">CheckMate!</h1>
+             </div>
+        </div>
+        
+        <div ng-switch='showIntro'>
+            <div ng-switch-when='false'>
+                <h1>Loading...</h1>
+
+                <div style="margin: 20px auto;" class="bubblingG">
+                    <span id="bubblingG_1">
+                    </span>
+                    <span id="bubblingG_2">
+                    </span>
+                    <span id="bubblingG_3">
+                    </span>
+                </div>
+            </div>
+            <div ng-switch-when='true'>
+                <div style='width: 70%; margin: auto;'>
+                    <h1>Welcome to CheckMate!</h1>
+                    <p>CheckMate is a simple quizz to test you on your LinkedIn connections.</p>
+                    <p>To get started, you will need to connect your LinkedIn account.</p>
+                    <ons-button ng-click='connect();'>Connect with LinkedIn</ons-button>
+                </div>
+            </div>
+        </div>
+    </ons-page>
+</ons-navigator>

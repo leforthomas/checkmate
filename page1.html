@@ -1,0 +1,43 @@
+<ons-navigator class='navigator' title="Who is it?" left-button-icon="fa fa-lg fa-hand-o-right">
+    
+    <ons-page class="center">
+        
+        <div style='height: 100%' ng-switch='state.showResult'>
+            <div style='height: 100%' ng-switch-when='false'>
+                <div class='picturePanel'>
+                    <img class='profilePicture' ng-src='{{profileImage}}'/>
+                </div>
+                <div class='namesPanel'>
+                    <div class='name' ng-class="error ? 'hinge animated' : ''" ng-repeat="name in names" ng-controller='nameController' ng-click='checkUser()'>
+                        {{name.name}}
+                    </div>
+                </div>
+
+                <ons-bottom-toolbar>
+                    <div class="scorePanel">
+                        <span>
+                            <b>Score: </b>
+                            {{scoreValue}}
+                        </span>
+                        <span class="scoreComment" ui-scope-comment='scoreComment'>
+                            {{scoreComment}}
+                        </span>
+                    </div>
+                </ons-bottom-toolbar>
+            </div>
+            <div ng-switch-when='true'>
+                <div style='width: 70%; margin: auto;'>
+                    <h1>Well done!</h1>
+                    <p>You scored: {{scoreResult}}</p>
+<!--
+                    <ons-button type='large' ng-click='share();'>Share on LinkedIn</ons-button>
+-->
+                    <p></p>
+                    <ons-button type='large' ng-click='restart();'>Have another go!</ons-button>
+                </div>
+            </div>
+        </div>
+
+    </ons-page>
+    
+</ons-navigator>    
